@@ -1,6 +1,7 @@
-
-   
 const express = require("express");
+const sequelize = require("./database");
+
+sequelize.sync().then(()=> console.log("DB IS READY"));
 
 const app = express();
 
